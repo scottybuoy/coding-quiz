@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    color: rgb(39, 48, 63);
+}
+
+#quizBody {
+    width: 40%;
+    background-color: gold;
+    margin: auto;
+    padding: 30px;
+    margin-top: 10%;
+    border-radius: 15px;
+}
+
+button {
+    display: block;
+    padding: 9px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border-style: none;
+    cursor: pointer;
+    background-color:rgb(255, 244, 179);
+    color:rgb(39, 48, 63);
+}
+
+#mainHead {
+    
+}
