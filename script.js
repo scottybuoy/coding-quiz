@@ -1,5 +1,6 @@
 var quizCont = document.querySelector("#quizBody");
 var buttonCont = document.querySelector("#buttonCont");
+
 const header1 = document.querySelector("#mainHead");
 const button1 = document.querySelector("#b1");
 const button2 = document.querySelector("#b2");
@@ -64,11 +65,35 @@ const quizQuestions = [
     }
 ]
 
-header1.textContent = quizQuestions[0].question;
-button1.textContent = quizQuestions[0].answers.a;
-button2.textContent = quizQuestions[0].answers.b;
-button3.textContent = quizQuestions[0].answers.c;
-button4.textContent = quizQuestions[0].answers.d;
+// LANDING PAGE //
+header1.setAttribute("style", "text-align: center;");
+button1.setAttribute("style", "margin: 0 auto;")
+const desc = document.createElement("p");
+desc.setAttribute("id","desc");
+quizBody.insertBefore(desc,buttonCont);
+// quizBody.appendChild(desc);
+desc.textContent = "Each incorrect answer removes 20s from the clock!";
+buttonCont.removeChild(button2); 
+buttonCont.removeChild(button3);  
+buttonCont.removeChild(button4);
+header1.textContent = "Javascript Quiz";
+button1.textContent = "Start Now!";
+button1.addEventListener("click", trans0);
+function trans0() {
+    header1.setAttribute("style", "text-align: left;");
+    buttonCont.appendChild(button2);
+    buttonCont.appendChild(button3);
+    buttonCont.appendChild(button4);
+    button1.setAttribute("style", "margin: left;")
+    quizBody.removeChild(desc);
+    header1.textContent = quizQuestions[0].question;
+    button1.textContent = quizQuestions[0].answers.a;
+    button2.textContent = quizQuestions[0].answers.b;
+    button3.textContent = quizQuestions[0].answers.c;
+    button4.textContent = quizQuestions[0].answers.d;
+}
+
+
 
 button2.addEventListener("click", trans1);
 function trans1() {

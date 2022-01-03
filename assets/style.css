@@ -3,6 +3,12 @@ body {
     color: rgb(39, 48, 63);
 }
 
+#timer {
+    text-align: right;
+    font-style: italic;
+    color: rgb(90, 95, 104);
+}
+
 #quizBody {
     width: 40%;
     background-color: gold;
@@ -25,4 +31,10 @@ button {
 
 #mainHead {
     
+}
+
+#desc {
+    text-align: center;
+    color: rgb(39, 48, 63);
+    font-style: italic;
 }
